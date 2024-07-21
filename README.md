@@ -7,6 +7,7 @@
 * Azul Zing
 * Azul Zulu
 * GraalVM EE
+* GraalVM CE
 * Adoptium Temurin
 * Bellsoft
 * Microsoft
@@ -19,6 +20,7 @@
 * Huawei Bisheng
 * Dragonwell
 * Jetbrains Runtime
+* OpenLogic
 
 如果有其他的jdk没有列出来，可以跟我们联系
 
