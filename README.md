@@ -14,7 +14,6 @@
 * Oracle
 * OpenJDK
 * IBM OpenJ9
-* RedHat
 * Amazon Corretto
 * Sapmachine
 * Huawei Bisheng
