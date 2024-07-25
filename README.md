@@ -4,6 +4,8 @@
 
 ## 参赛选手
 
+### Linux
+
 * Azul Zing
 * Azul Zulu
 * GraalVM EE
@@ -20,8 +22,44 @@
 * Dragonwell
 * Jetbrains Runtime
 * OpenLogic
+* RedHat
 
-如果有其他的jdk没有列出来，可以跟我们联系
+### Windows
+
+Java 21:
+
+* Azul Zulu
+* GraalVM EE
+* GraalVM CE
+* Adoptium Temurin
+* Bellsoft
+* Microsoft
+* Oracle
+* OpenJDK
+* IBM OpenJ9
+* Amazon Corretto
+* Sapmachine
+* Dragonwell
+* OpenLogic
+* RedHat*
+
+*:(Java 21的 RedHat 由于一些原因没有参赛,但已经补测，不如GraalVM EE)
+
+**[点击查看Java21测试结果 (Windows)](./Windows/Java%2021/Java21.md)**
+
+Java 8:
+
+* Adoptium Eclipse Temurin
+* Alibaba Dragonwell
+* IBM OpenJ9
+* RedHat
+* Bellsoft
+* Tencent Kona
+* Oracle
+* Azul Zulu
+* Amazon Corretto
+
+**[点击查看Java8测试结果 (Windows)](./Windows/Java%208/Java8.md)**
 
 ## JVM参数
 
@@ -31,7 +69,7 @@
 
 ### Chunky 预加载
 
-Chunky 预加载主世界半径5000格,比较 TPS,MSPT,CPS,生成时间，内存占用，同时，提供每个jdk对应的spark
+Chunky 预加载主世界半径2500格,比较 TPS,MSPT,CPS,生成时间，内存占用，同时，提供每个jdk对应的spark
 
 目前我们只有此计划，如果您希望测试其他的项目，请提供相应的自动化测试工具(不要指望我去给你写）
 
@@ -41,7 +79,7 @@ Chunky 预加载主世界半径5000格,比较 TPS,MSPT,CPS,生成时间，内存
 
 ### 机器
 
-要求为4h8g以上,拥有80 GB以上的空余空间，操作系统为 Linux
+要求为4h8g以上,拥有80 GB以上的空余空间，操作系统为 Linux 或 Windows
 
 ### 自动化测试工具
 
