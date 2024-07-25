@@ -73,6 +73,21 @@ Chunky 预加载主世界半径2500格,比较 TPS,MSPT,CPS,生成时间，内存
 
 目前我们只有此计划，如果您希望测试其他的项目，请提供相应的自动化测试工具(不要指望我去给你写）
 
+## GC (垃圾回收器) 测试
+
+已测试的垃圾回收器:
+
+- G1GC
+- Parallel GC
+- Serial GC
+- Shenandoah GC(IU Mode)
+- Shenandoah GC(Normal)
+- Shenandoah GC(被动模式)
+- ZGC Generational
+- ZGC Non-Proactive
+
+**[点击查看GC测试详情](./GC/garbage-collector.md)**
+
 ## 支持我们
 
 您可以选择以下方式来为这场大型测试提供帮助

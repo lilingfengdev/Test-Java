@@ -1,0 +1,48 @@
+
+GC:G1GC
+吞吐量:99.447MS
+最大暂停时间:100.0MS
+平均暂停时间:33.879753MS
+
+
+GC:ParallelGC
+吞吐量:98.368MS
+最大暂停时间:3560.0MS
+平均暂停时间:57.993484MS
+
+
+GC:SerialGC
+吞吐量:97.388MS
+最大暂停时间:750.0MS
+平均暂停时间:79.98589MS
+
+
+GC:Shenandoah GC(IU Mode)
+吞吐量:99.994MS
+最大暂停时间:1.775MS
+平均暂停时间:0.15798192MS
+
+
+GC:Shenandoah GC(Normal)
+吞吐量:99.994MS
+最大暂停时间:0.434MS
+平均暂停时间:0.14130533MS
+
+
+GC:Shenandoah GC(Passive Mode)
+吞吐量:97.765MS
+最大暂停时间:402.122MS
+平均暂停时间:242.55305MS
+
+
+GC:ZGC Generational
+吞吐量:99.999MS
+最大暂停时间:0.472MS
+平均暂停时间:0.013060869MS
+
+
+GC:ZGC Non-Proactive
+吞吐量:99.999MS
+最大暂停时间:7.25MS
+平均暂停时间:0.026161538MS
+
