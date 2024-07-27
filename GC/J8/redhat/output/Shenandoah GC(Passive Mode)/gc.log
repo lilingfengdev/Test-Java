@@ -1,0 +1,1444 @@
+OpenJDK 64-Bit Server VM (25.345-b01) for windows-amd64 JRE (1.8.0_345-b01), built on Aug  3 2022 09:57:30 by "build" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16485540k(9134332k free), swap 28358524k(11374484k free)
+CommandLine flags: -XX:ActiveProcessorCount=8 -XX:AllocatePrefetchStyle=1 -XX:InitialHeapSize=8589934592 -XX:MaxHeapSize=8589934592 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:ShenandoahGCMode=passive -XX:+UnlockDiagnosticVMOptions -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseShenandoahGC 
+Regions: 2048 x 4096K
+Humongous object threshold: 4096K
+Max TLAB size: 512K
+GC threads: 4 parallel, 2 concurrent
+Heuristics ergonomically sets -XX:-ShenandoahPacing
+Heuristics ergonomically sets -XX:-ShenandoahLoadRefBarrier
+Heuristics ergonomically sets -XX:-ShenandoahSATBBarrier
+Heuristics ergonomically sets -XX:-ShenandoahCASBarrier
+Heuristics ergonomically sets -XX:-ShenandoahCloneBarrier
+Shenandoah GC mode: Passive
+Shenandoah heuristics: Passive
+Initialize Shenandoah heap: 8192M initial, 8192M min, 8192M max
+Reference processing: parallel discovery, parallel processing
+Failed to allocate Shared, 16B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+4.435: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 1107M, Max CSet: 922M
+    Collectable Garbage: 7661M (100%), Immediate: 695M (9%), CSet: 6966M (90%)
+    Good progress for free space: 7681M, need 83886K
+    Good progress for used space: 7660M, need 4096K
+4.593: [Pause Degenerated GC (Outside of Cycle) 7759M->100912K(8192M), 158.290 ms]
+Free: 7680M, Max: 4096K regular, 7676M humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    8 us
+  Make Parsable                       2 us
+  Update Region States               79 us
+  Scan Roots                       1277 us, parallelism: 2.70x
+    S: <total>                     3444 us
+    S: Thread Roots                2636 us, workers (us): 1011, 765, 645, 215, 
+    S: Universe Roots                 6 us, workers (us):   6, ---, ---, ---, 
+    S: JNI Handles Roots             16 us, workers (us): ---, ---,  16, ---, 
+    S: Synchronizer Roots            18 us, workers (us):  10,   8,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               7 us, workers (us): ---,   7, ---, ---, 
+    S: System Dict Roots            168 us, workers (us): ---, 168, ---, ---, 
+    S: CLDG Roots                   589 us, workers (us):  52,  18,  48, 471, 
+    S: JVMTI Roots                    4 us, workers (us): ---, ---,   4, ---, 
+  Resize TLABs                        1 us
+  Finish Queues                   51127 us
+  Weak References                  2013 us
+    Process                        1910 us
+    Enqueue                         100 us
+  Weak Roots                         26 us, parallelism: 0.98x
+    WR: <total>                      26 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               26 us, workers (us):  26, ---, ---, ---, 
+  System Purge                     5869 us
+    Unload Classes                  248 us
+    Parallel Cleanup               4968 us
+    Deallocate Metadata             387 us
+    CLDG                             96 us
+  Update Region States               54 us
+  Retire TLABs                        3 us
+  Choose Collection Set              42 us
+  Rebuild Free Set                    8 us
+  Initial Evacuation                  1 us
+  Prepare                             1 us
+  Finish Work                     35287 us
+  Update Region States              148 us
+  Trash Collection Set               23 us
+  Rebuild Free Set                   13 us
+Pause Degenerated GC (G)         158744 us
+Pause Degenerated GC (N)         158323 us
+  Degen Update Roots               1438 us, parallelism: 3.51x
+    DU: <total>                    5055 us
+    DU: Thread Roots               1027 us, workers (us): 527, 276, 129,  95, 
+    DU: Code Cache Roots           2269 us, workers (us): 397, 559, 718, 595, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             2 us, workers (us):   2, ---, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us): ---,   0, ---, ---, 
+    DU: JNI Weak Roots              110 us, workers (us): ---, 110, ---, ---, 
+    DU: String Table Roots         1049 us, workers (us): 324, 237, 176, 313, 
+    DU: Synchronizer Roots            6 us, workers (us):   4,   2,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us): ---,   4, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             7 us, workers (us):   7, ---, ---, ---, 
+    DU: CLDG Roots                  578 us, workers (us):  20, 105, 226, 227, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 47205K->47037K(1093632K)]
+Failed to allocate Shared, 8208B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+38.193: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 524M, Max CSet: 436M
+    Collectable Garbage: 7422M (99%), Immediate: 112M (1%), CSet: 7310M (98%)
+    Good progress for free space: 7427M, need 83886K
+    Good progress for used space: 7420M, need 4096K
+38.752: [Pause Degenerated GC (Outside of Cycle) 7772M->352M(8192M), 559.898 ms]
+Free: 7427M, Max: 4096K regular, 7412M humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                   25 us
+  Make Parsable                      15 us
+  Update Region States              118 us
+  Scan Roots                       2759 us, parallelism: 1.88x
+    S: <total>                     5198 us
+    S: Thread Roots                2992 us, workers (us):   2, 264, 2102, 624, 
+    S: Universe Roots                10 us, workers (us):  10, ---, ---, ---, 
+    S: JNI Handles Roots             14 us, workers (us): ---, ---,  14, ---, 
+    S: Synchronizer Roots            20 us, workers (us):  10,  10,   0,   0, 
+    S: Flat Profiler Roots            3 us, workers (us):   3, ---, ---, ---, 
+    S: Management Roots               9 us, workers (us): ---,   9, ---, ---, 
+    S: System Dict Roots            484 us, workers (us): ---, 484, ---, ---, 
+    S: CLDG Roots                  1664 us, workers (us): 1311,  26, 172, 154, 
+    S: JVMTI Roots                    2 us, workers (us): ---, ---,   2, ---, 
+  Resize TLABs                        5 us
+  Finish Queues                   69758 us
+  Weak References                  3229 us
+    Process                        3132 us
+    Enqueue                          94 us
+  Weak Roots                         34 us, parallelism: 0.99x
+    WR: <total>                      34 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               34 us, workers (us):  34, ---, ---, ---, 
+  System Purge                     8864 us
+    Unload Classes                  342 us
+    Parallel Cleanup               8163 us
+    Deallocate Metadata             274 us
+    CLDG                             18 us
+  Update Region States              214 us
+  Retire TLABs                        6 us
+  Choose Collection Set              26 us
+  Rebuild Free Set                    8 us
+  Initial Evacuation                  1 us
+  Prepare                             3 us
+  Finish Work                     52942 us
+  Update Region States               92 us
+  Trash Collection Set               33 us
+  Rebuild Free Set                   10 us
+Pause Degenerated GC (G)         560198 us
+Pause Degenerated GC (N)         559929 us
+  Degen Update Roots               2794 us, parallelism: 3.72x
+    DU: <total>                   10384 us
+    DU: Thread Roots               1331 us, workers (us): 353, 711, 151, 116, 
+    DU: Code Cache Roots           7014 us, workers (us): 1916, 1670, 1696, 1732, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             2 us, workers (us): ---,   2, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us): ---, ---,   0, ---, 
+    DU: JNI Weak Roots              122 us, workers (us): ---, ---, 122, ---, 
+    DU: String Table Roots         1048 us, workers (us): 182, 208, 298, 360, 
+    DU: Synchronizer Roots            7 us, workers (us):   0,   6,   0,   0, 
+    DU: Flat Profiler Roots           7 us, workers (us):   7, ---, ---, ---, 
+    DU: Management Roots              2 us, workers (us):   2, ---, ---, ---, 
+    DU: System Dict Roots            11 us, workers (us):  11, ---, ---, ---, 
+    DU: CLDG Roots                  838 us, workers (us): 143,  29, 333, 334, 
+    DU: JVMTI Roots                   1 us, workers (us): ---,   1, ---, ---, 
+, [Metaspace: 64808K->64794K(1107968K)]
+Failed to allocate Shared, 64784B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+88.054: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 496M, Max CSet: 413M
+    Collectable Garbage: 7400M (99%), Immediate: 86016K (1%), CSet: 7316M (98%)
+    Good progress for free space: 7398M, need 83886K
+    Good progress for used space: 7398M, need 4096K
+88.301: [Pause Degenerated GC (Outside of Cycle) 7779M->381M(8192M), 247.286 ms]
+Free: 7398M, Max: 4096K regular, 7392M humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    8 us
+  Make Parsable                       3 us
+  Update Region States              224 us
+  Scan Roots                       8079 us, parallelism: 1.62x
+    S: <total>                    13067 us
+    S: Thread Roots               12311 us, workers (us):   1, 4347, 7734, 228, 
+    S: Universe Roots                 4 us, workers (us):   4, ---, ---, ---, 
+    S: JNI Handles Roots              8 us, workers (us):   8, ---, ---, ---, 
+    S: Synchronizer Roots            10 us, workers (us):   3,   7,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us): ---,   1, ---, ---, 
+    S: Management Roots               3 us, workers (us): ---,   3, ---, ---, 
+    S: System Dict Roots            229 us, workers (us): ---, 229, ---, ---, 
+    S: CLDG Roots                   501 us, workers (us): 406,  24,  46,  25, 
+    S: JVMTI Roots                    0 us, workers (us):   0, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                   78705 us
+  Weak References                  2559 us
+    Process                        2462 us
+    Enqueue                          93 us
+  Weak Roots                         26 us, parallelism: 0.96x
+    WR: <total>                      25 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               24 us, workers (us):  24, ---, ---, ---, 
+  System Purge                     8460 us
+    Unload Classes                  317 us
+    Parallel Cleanup               7975 us
+    Deallocate Metadata              78 us
+    CLDG                              4 us
+  Update Region States              189 us
+  Retire TLABs                        5 us
+  Choose Collection Set              31 us
+  Rebuild Free Set                    8 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     50065 us
+  Update Region States              178 us
+  Trash Collection Set               22 us
+  Rebuild Free Set                   10 us
+Pause Degenerated GC (G)         248045 us
+Pause Degenerated GC (N)         247310 us
+  Degen Update Roots               1744 us, parallelism: 3.42x
+    DU: <total>                    5971 us
+    DU: Thread Roots               1035 us, workers (us): 592, 118, 242,  83, 
+    DU: Code Cache Roots           3457 us, workers (us): 671, 917, 912, 957, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Weak Roots              153 us, workers (us): 153, ---, ---, ---, 
+    DU: String Table Roots          659 us, workers (us):  68, 211, 208, 172, 
+    DU: Synchronizer Roots            5 us, workers (us):   5,   0,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             8 us, workers (us):   8, ---, ---, ---, 
+    DU: CLDG Roots                  645 us, workers (us):  28, 248, 121, 248, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 65437K->65434K(1110016K)]
+Failed to allocate Shared, 16B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+137.602: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 488M, Max CSet: 406M
+    Collectable Garbage: 7338M (99%), Immediate: 77824K (1%), CSet: 7262M (98%)
+    Good progress for free space: 7336M, need 83886K
+    Good progress for used space: 7336M, need 4096K
+137.834: [Pause Degenerated GC (Outside of Cycle) 7779M->443M(8192M), 232.211 ms]
+Free: 7336M, Max: 4096K regular, 7332M humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    7 us
+  Make Parsable                       3 us
+  Update Region States              149 us
+  Scan Roots                       1049 us, parallelism: 1.58x
+    S: <total>                     1660 us
+    S: Thread Roots                 936 us, workers (us):   2,  27, 712, 195, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             6 us, workers (us):   3,   3,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us): ---,   1, ---, ---, 
+    S: Management Roots               2 us, workers (us): ---,   2, ---, ---, 
+    S: System Dict Roots            224 us, workers (us): ---, 224, ---, ---, 
+    S: CLDG Roots                   488 us, workers (us): 398,  27,  37,  25, 
+    S: JVMTI Roots                    1 us, workers (us):   1, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                   77139 us
+  Weak References                  2527 us
+    Process                        2471 us
+    Enqueue                          54 us
+  Weak Roots                         23 us, parallelism: 0.97x
+    WR: <total>                      22 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               22 us, workers (us):  22, ---, ---, ---, 
+  System Purge                     7657 us
+    Unload Classes                  137 us
+    Parallel Cleanup               7373 us
+    Deallocate Metadata              78 us
+    CLDG                              3 us
+  Update Region States               30 us
+  Retire TLABs                        5 us
+  Choose Collection Set              36 us
+  Rebuild Free Set                    8 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     46964 us
+  Update Region States              143 us
+  Trash Collection Set               23 us
+  Rebuild Free Set                   11 us
+Pause Degenerated GC (G)         232449 us
+Pause Degenerated GC (N)         232240 us
+  Degen Update Roots               1472 us, parallelism: 3.51x
+    DU: <total>                    5170 us
+    DU: Thread Roots                902 us, workers (us): 100, 236, 500,  66, 
+    DU: Code Cache Roots           2931 us, workers (us): 759, 729, 599, 844, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us): ---,   0, ---, ---, 
+    DU: JNI Weak Roots              146 us, workers (us): ---, 146, ---, ---, 
+    DU: String Table Roots          588 us, workers (us): 208,  83, 173, 124, 
+    DU: Synchronizer Roots            7 us, workers (us):   5,   0,   2,   0, 
+    DU: Flat Profiler Roots           7 us, workers (us): ---,   7, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             9 us, workers (us):   9, ---, ---, ---, 
+    DU: CLDG Roots                  576 us, workers (us): 225,  97,  29, 225, 
+    DU: JVMTI Roots                   0 us, workers (us): ---,   0, ---, ---, 
+, [Metaspace: 65632K->65632K(1110016K)]
+Failed to allocate Shared, 24B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+188.124: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 504M, Max CSet: 420M
+    Collectable Garbage: 7279M (99%), Immediate: 94208K (1%), CSet: 7187M (98%)
+    Good progress for free space: 7277M, need 83886K
+    Good progress for used space: 7277M, need 4096K
+188.374: [Pause Degenerated GC (Outside of Cycle) 7780M->502M(8192M), 250.026 ms]
+Free: 7276M, Max: 4096K regular, 7272M humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                   16 us
+  Make Parsable                       8 us
+  Update Region States              100 us
+  Scan Roots                       1117 us, parallelism: 1.68x
+    S: <total>                     1876 us
+    S: Thread Roots                 967 us, workers (us):  33, 222, 710,   1, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              4 us, workers (us): ---,   4, ---, ---, 
+    S: Synchronizer Roots            11 us, workers (us):   0,   5,   6,   0, 
+    S: Flat Profiler Roots            7 us, workers (us):   7, ---, ---, ---, 
+    S: Management Roots               2 us, workers (us):   2, ---, ---, ---, 
+    S: System Dict Roots            251 us, workers (us): 251, ---, ---, ---, 
+    S: CLDG Roots                   631 us, workers (us):  27,  87,  89, 428, 
+    S: JVMTI Roots                    1 us, workers (us): ---,   1, ---, ---, 
+  Resize TLABs                        3 us
+  Finish Queues                   81002 us
+  Weak References                  2385 us
+    Process                        2310 us
+    Enqueue                          71 us
+  Weak Roots                         24 us, parallelism: 0.96x
+    WR: <total>                      23 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               22 us, workers (us):  22, ---, ---, ---, 
+  System Purge                     7987 us
+    Unload Classes                  142 us
+    Parallel Cleanup               7702 us
+    Deallocate Metadata              69 us
+    CLDG                              3 us
+  Update Region States              145 us
+  Retire TLABs                        5 us
+  Choose Collection Set              28 us
+  Rebuild Free Set                    8 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     48170 us
+  Update Region States              159 us
+  Trash Collection Set               20 us
+  Rebuild Free Set                   11 us
+Pause Degenerated GC (G)         250315 us
+Pause Degenerated GC (N)         250056 us
+  Degen Update Roots               1055 us, parallelism: 3.17x
+    DU: <total>                    3350 us
+    DU: Thread Roots                937 us, workers (us): 557, 228,  92,  60, 
+    DU: Code Cache Roots           1067 us, workers (us): 122, 312, 322, 311, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             2 us, workers (us):   2, ---, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us): ---, ---, ---,   0, 
+    DU: JNI Weak Roots              159 us, workers (us): ---, ---, ---, 159, 
+    DU: String Table Roots          584 us, workers (us): 161, 194, 185,  44, 
+    DU: Synchronizer Roots            4 us, workers (us):   4,   0,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             6 us, workers (us):   6, ---, ---, ---, 
+    DU: CLDG Roots                  585 us, workers (us):  28, 118, 220, 219, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 65717K->65717K(1110016K)]
+Failed to allocate Shared, 16400B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+255.485: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 6332M (87%), Immediate: 0B (0%), CSet: 6332M (87%)
+    Good progress for free space: 6332M, need 83886K
+    Good progress for used space: 6332M, need 4096K
+255.923: [Pause Degenerated GC (Outside of Cycle) 7779M->1447M(8192M), 437.849 ms]
+Free: 6332M, Max: 4096K regular, 6328M humongous, Frag: 0% external, 4% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    7 us
+  Make Parsable                       3 us
+  Update Region States              210 us
+  Scan Roots                       1052 us, parallelism: 1.59x
+    S: <total>                     1677 us
+    S: Thread Roots                 935 us, workers (us):   1,  21, 707, 206, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              3 us, workers (us):   3, ---, ---, ---, 
+    S: Synchronizer Roots             6 us, workers (us):   3,   3,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us): ---,   1, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            245 us, workers (us): ---, 245, ---, ---, 
+    S: CLDG Roots                   483 us, workers (us): 389,  24,  45,  25, 
+    S: JVMTI Roots                    0 us, workers (us): ---,   0, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                   78322 us
+  Weak References                  3110 us
+    Process                        3005 us
+    Enqueue                         102 us
+  Weak Roots                         21 us, parallelism: 0.97x
+    WR: <total>                      20 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               20 us, workers (us):  20, ---, ---, ---, 
+  System Purge                     8081 us
+    Unload Classes                  136 us
+    Parallel Cleanup               7793 us
+    Deallocate Metadata              83 us
+    CLDG                              3 us
+  Update Region States              208 us
+  Retire TLABs                        5 us
+  Choose Collection Set              27 us
+  Rebuild Free Set                   12 us
+  Initial Evacuation                  1 us
+  Prepare                             1 us
+  Finish Work                     51191 us
+  Update Region States              100 us
+  Trash Collection Set               30 us
+  Rebuild Free Set                   11 us
+Pause Degenerated GC (G)         438047 us
+Pause Degenerated GC (N)         437878 us
+  Degen Update Roots               1181 us, parallelism: 3.01x
+    DU: <total>                    3560 us
+    DU: Thread Roots               1125 us, workers (us):  69, 770, 216,  70, 
+    DU: Code Cache Roots           1001 us, workers (us): 315,   0, 332, 354, 
+    DU: Universe Roots               20 us, workers (us):  20, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Weak Roots              227 us, workers (us): 227, ---, ---, ---, 
+    DU: String Table Roots          646 us, workers (us):  56,  78, 262, 250, 
+    DU: Synchronizer Roots            6 us, workers (us):   6,   0,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             7 us, workers (us):   7, ---, ---, ---, 
+    DU: CLDG Roots                  520 us, workers (us): 211,  29,  69, 211, 
+    DU: JVMTI Roots                   1 us, workers (us):   1, ---, ---, ---, 
+, [Metaspace: 65790K->65790K(1110016K)]
+Failed to allocate Shared, 16400B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+312.425: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 5724M (79%), Immediate: 0B (0%), CSet: 5724M (79%)
+    Good progress for free space: 5680M, need 83886K
+    Good progress for used space: 5680M, need 4096K
+312.699: [Pause Degenerated GC (Outside of Cycle) 7779M->2099M(8192M), 274.155 ms]
+Free: 5680M, Max: 4096K regular, 5676M humongous, Frag: 0% external, 6% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    7 us
+  Make Parsable                       3 us
+  Update Region States              251 us
+  Scan Roots                       1108 us, parallelism: 1.68x
+    S: <total>                     1857 us
+    S: Thread Roots                1015 us, workers (us):  55,   1, 737, 223, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             5 us, workers (us):   5,   0,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            235 us, workers (us): 235, ---, ---, ---, 
+    S: CLDG Roots                   596 us, workers (us):  27, 497,  46,  25, 
+    S: JVMTI Roots                    0 us, workers (us):   0, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                   87372 us
+  Weak References                  2915 us
+    Process                        2828 us
+    Enqueue                          84 us
+  Weak Roots                         22 us, parallelism: 0.97x
+    WR: <total>                      22 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               22 us, workers (us):  22, ---, ---, ---, 
+  System Purge                     9798 us
+    Unload Classes                  381 us
+    Parallel Cleanup               9235 us
+    Deallocate Metadata             102 us
+    CLDG                             12 us
+  Update Region States              124 us
+  Retire TLABs                       14 us
+  Choose Collection Set              82 us
+  Rebuild Free Set                   10 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     56141 us
+  Update Region States               21 us
+  Trash Collection Set               18 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         274339 us
+Pause Degenerated GC (N)         274179 us
+  Degen Update Roots               1196 us, parallelism: 3.45x
+    DU: <total>                    4132 us
+    DU: Thread Roots               1415 us, workers (us): 835,  86,  97, 396, 
+    DU: Code Cache Roots           1163 us, workers (us):   0, 388, 444, 331, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us): ---,   1, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---,   1, ---, ---, 
+    DU: JNI Weak Roots              190 us, workers (us): ---, 190, ---, ---, 
+    DU: String Table Roots          756 us, workers (us): 170,  89, 232, 265, 
+    DU: Synchronizer Roots            8 us, workers (us):   0,   4,   4,   0, 
+    DU: Flat Profiler Roots           6 us, workers (us):   6, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots            10 us, workers (us): ---,  10, ---, ---, 
+    DU: CLDG Roots                  581 us, workers (us):  26, 259, 263,  33, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 70489K->70463K(1114112K)]
+Failed to allocate Shared, 16400B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+364.824: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 436M, Max CSet: 363M
+    Collectable Garbage: 5700M (79%), Immediate: 24576K (0%), CSet: 5676M (79%)
+    Good progress for free space: 5698M, need 83886K
+    Good progress for used space: 5697M, need 4096K
+365.141: [Pause Degenerated GC (Outside of Cycle) 7779M->2081M(8192M), 317.386 ms]
+Free: 5697M, Max: 4096K regular, 2920M humongous, Frag: 49% external, 7% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                   17 us
+  Make Parsable                       6 us
+  Update Region States               58 us
+  Scan Roots                       4532 us, parallelism: 1.20x
+    S: <total>                     5438 us
+    S: Thread Roots                4525 us, workers (us):   1,   1, 4282, 241, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots            18 us, workers (us):   3,   4,   6,   4, 
+    S: Flat Profiler Roots            3 us, workers (us): ---,   3, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            278 us, workers (us): 278, ---, ---, ---, 
+    S: CLDG Roots                   609 us, workers (us):  29, 469,  56,  55, 
+    S: JVMTI Roots                    1 us, workers (us): ---,   1, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  110015 us
+  Weak References                  1967 us
+    Process                        1864 us
+    Enqueue                         101 us
+  Weak Roots                         28 us, parallelism: 0.97x
+    WR: <total>                      27 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               27 us, workers (us):  27, ---, ---, ---, 
+  System Purge                    11827 us
+    Unload Classes                  149 us
+    Parallel Cleanup              11385 us
+    Deallocate Metadata             213 us
+    CLDG                              4 us
+  Update Region States               74 us
+  Retire TLABs                        6 us
+  Choose Collection Set              34 us
+  Rebuild Free Set                    9 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     68331 us
+  Update Region States               23 us
+  Trash Collection Set               20 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         317512 us
+Pause Degenerated GC (N)         317406 us
+  Degen Update Roots               1340 us, parallelism: 3.39x
+    DU: <total>                    4550 us
+    DU: Thread Roots               1683 us, workers (us): 115, 103, 994, 471, 
+    DU: Code Cache Roots           1189 us, workers (us): 436, 410,   0, 343, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us): ---,   1, ---, ---, 
+    DU: JFR Weak Roots                2 us, workers (us): ---,   2, ---, ---, 
+    DU: JNI Weak Roots              240 us, workers (us): ---, 240, ---, ---, 
+    DU: String Table Roots          717 us, workers (us): 274,  54, 111, 277, 
+    DU: Synchronizer Roots           12 us, workers (us):   0,   5,   5,   2, 
+    DU: Flat Profiler Roots           9 us, workers (us):   9, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots            15 us, workers (us): ---,  15, ---, ---, 
+    DU: CLDG Roots                  679 us, workers (us): 305, 306,  34,  34, 
+    DU: JVMTI Roots                   1 us, workers (us): ---,   1, ---, ---, 
+, [Metaspace: 70578K->70578K(1114112K)]
+Failed to allocate Shared, 24B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+416.397: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 804M, Max CSet: 670M
+    Collectable Garbage: 7110M (99%), Immediate: 392M (5%), CSet: 6718M (94%)
+    Good progress for free space: 7108M, need 83886K
+    Good progress for used space: 7108M, need 4096K
+416.691: [Pause Degenerated GC (Outside of Cycle) 7779M->671M(8192M), 293.949 ms]
+Free: 7107M, Max: 4096K regular, 2988M humongous, Frag: 58% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                   15 us
+  Make Parsable                       5 us
+  Update Region States              259 us
+  Scan Roots                       1108 us, parallelism: 1.87x
+    S: <total>                     2074 us
+    S: Thread Roots                1066 us, workers (us): 793,   1,   2, 270, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              4 us, workers (us): ---,   4, ---, ---, 
+    S: Synchronizer Roots            10 us, workers (us):   5,   2,   3,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            318 us, workers (us): ---, ---, 318, ---, 
+    S: CLDG Roots                   672 us, workers (us):  66, 529,  29,  48, 
+    S: JVMTI Roots                    0 us, workers (us):   0, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                   99898 us
+  Weak References                  2462 us
+    Process                        2365 us
+    Enqueue                          94 us
+  Weak Roots                         20 us, parallelism: 0.97x
+    WR: <total>                      20 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               19 us, workers (us):  19, ---, ---, ---, 
+  System Purge                     8540 us
+    Unload Classes                  149 us
+    Parallel Cleanup               8247 us
+    Deallocate Metadata              77 us
+    CLDG                              4 us
+  Update Region States              114 us
+  Retire TLABs                        5 us
+  Choose Collection Set              34 us
+  Rebuild Free Set                   10 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     63195 us
+  Update Region States               88 us
+  Trash Collection Set               24 us
+  Rebuild Free Set                   14 us
+Pause Degenerated GC (G)         294229 us
+Pause Degenerated GC (N)         293980 us
+  Degen Update Roots               1430 us, parallelism: 3.44x
+    DU: <total>                    4919 us
+    DU: Thread Roots               1192 us, workers (us): 699, 341,  92,  60, 
+    DU: Code Cache Roots           2018 us, workers (us): 258, 597, 672, 491, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             2 us, workers (us):   2, ---, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us): ---, ---, ---,   0, 
+    DU: JNI Weak Roots              186 us, workers (us): ---, ---, ---, 186, 
+    DU: String Table Roots          790 us, workers (us): 271, 215, 152, 152, 
+    DU: Synchronizer Roots            5 us, workers (us):   5,   0,   0,   0, 
+    DU: Flat Profiler Roots           5 us, workers (us): ---,   5, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             7 us, workers (us): ---,   7, ---, ---, 
+    DU: CLDG Roots                  712 us, workers (us):  28,  86, 299, 299, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 70702K->70702K(1114112K)]
+Failed to allocate Shared, 72B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+481.985: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 440M, Max CSet: 366M
+    Collectable Garbage: 6453M (90%), Immediate: 28672K (0%), CSet: 6425M (90%)
+    Good progress for free space: 6451M, need 83886K
+    Good progress for used space: 6451M, need 4096K
+482.278: [Pause Degenerated GC (Outside of Cycle) 7780M->1328M(8192M), 293.352 ms]
+Free: 6450M, Max: 4096K regular, 3672M humongous, Frag: 44% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    9 us
+  Make Parsable                       3 us
+  Update Region States              180 us
+  Scan Roots                       1229 us, parallelism: 1.59x
+    S: <total>                     1957 us
+    S: Thread Roots                1012 us, workers (us):   1,   1, 800, 210, 
+    S: Universe Roots                 3 us, workers (us):   3, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             6 us, workers (us):   5,   0,   0,   0, 
+    S: Flat Profiler Roots            2 us, workers (us):   2, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            295 us, workers (us): 295, ---, ---, ---, 
+    S: CLDG Roots                   636 us, workers (us):  28, 541,  43,  25, 
+    S: JVMTI Roots                    1 us, workers (us):   1, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  101743 us
+  Weak References                  2388 us
+    Process                        2328 us
+    Enqueue                          57 us
+  Weak Roots                         24 us, parallelism: 0.97x
+    WR: <total>                      23 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               23 us, workers (us):  23, ---, ---, ---, 
+  System Purge                     9367 us
+    Unload Classes                  151 us
+    Parallel Cleanup               9033 us
+    Deallocate Metadata             102 us
+    CLDG                              4 us
+  Update Region States              154 us
+  Retire TLABs                        5 us
+  Choose Collection Set              35 us
+  Rebuild Free Set                   10 us
+  Initial Evacuation                  2 us
+  Prepare                             2 us
+  Finish Work                     53912 us
+  Update Region States               96 us
+  Trash Collection Set               20 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         293561 us
+Pause Degenerated GC (N)         293381 us
+  Degen Update Roots               1148 us, parallelism: 3.32x
+    DU: <total>                    3807 us
+    DU: Thread Roots               1223 us, workers (us): 310,  90, 764,  59, 
+    DU: Code Cache Roots           1196 us, workers (us): 362, 477,   0, 357, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---, ---, ---,   1, 
+    DU: JNI Weak Roots              168 us, workers (us): ---, ---, ---, 168, 
+    DU: String Table Roots          680 us, workers (us): 262, 161, 148, 109, 
+    DU: Synchronizer Roots            6 us, workers (us):   6,   0,   0,   0, 
+    DU: Flat Profiler Roots           6 us, workers (us): ---,   6, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             8 us, workers (us): ---,   8, ---, ---, 
+    DU: CLDG Roots                  515 us, workers (us):  29, 227,  28, 230, 
+    DU: JVMTI Roots                   1 us, workers (us): ---,   1, ---, ---, 
+, [Metaspace: 70771K->70771K(1114112K)]
+Failed to allocate Shared, 16400B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+538.747: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 424M, Max CSet: 353M
+    Collectable Garbage: 6546M (92%), Immediate: 12288K (0%), CSet: 6534M (92%)
+    Good progress for free space: 6544M, need 83886K
+    Good progress for used space: 6544M, need 4096K
+539.035: [Pause Degenerated GC (Outside of Cycle) 7779M->1235M(8192M), 287.881 ms]
+Free: 6543M, Max: 4096K regular, 3728M humongous, Frag: 43% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    9 us
+  Make Parsable                       3 us
+  Update Region States              197 us
+  Scan Roots                       1341 us, parallelism: 1.54x
+    S: <total>                     2063 us
+    S: Thread Roots                1100 us, workers (us):   5,   1, 884, 209, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             6 us, workers (us):   6,   0,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            286 us, workers (us): 286, ---, ---, ---, 
+    S: CLDG Roots                   665 us, workers (us):  26, 550,  46,  43, 
+    S: JVMTI Roots                    1 us, workers (us):   1, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  102077 us
+  Weak References                  2238 us
+    Process                        2182 us
+    Enqueue                          53 us
+  Weak Roots                         26 us, parallelism: 0.96x
+    WR: <total>                      25 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               24 us, workers (us):  24, ---, ---, ---, 
+  System Purge                     9119 us
+    Unload Classes                  142 us
+    Parallel Cleanup               8779 us
+    Deallocate Metadata             109 us
+    CLDG                              4 us
+  Update Region States               62 us
+  Retire TLABs                        5 us
+  Choose Collection Set              27 us
+  Rebuild Free Set                   10 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     65644 us
+  Update Region States              115 us
+  Trash Collection Set               22 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         288093 us
+Pause Degenerated GC (N)         287912 us
+  Degen Update Roots               1258 us, parallelism: 3.07x
+    DU: <total>                    3866 us
+    DU: Thread Roots               1109 us, workers (us): 706, 290,  58,  56, 
+    DU: Code Cache Roots           1448 us, workers (us):  46, 444, 495, 463, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us): ---,   1, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---,   1, ---, ---, 
+    DU: JNI Weak Roots              156 us, workers (us): ---, 156, ---, ---, 
+    DU: String Table Roots          617 us, workers (us): 199,  44, 167, 207, 
+    DU: Synchronizer Roots            6 us, workers (us):   1,   4,   0,   0, 
+    DU: Flat Profiler Roots           5 us, workers (us):   5, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             8 us, workers (us): ---,   8, ---, ---, 
+    DU: CLDG Roots                  513 us, workers (us):  27,  30, 227, 229, 
+    DU: JVMTI Roots                   1 us, workers (us): ---,   1, ---, ---, 
+, [Metaspace: 70835K->70835K(1114112K)]
+Failed to allocate Shared, 24B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+594.936: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 448M, Max CSet: 373M
+    Collectable Garbage: 6650M (94%), Immediate: 36864K (0%), CSet: 6614M (93%)
+    Good progress for free space: 6648M, need 83886K
+    Good progress for used space: 6648M, need 4096K
+595.228: [Pause Degenerated GC (Outside of Cycle) 7779M->1131M(8192M), 292.349 ms]
+Free: 6648M, Max: 4096K regular, 3748M humongous, Frag: 44% external, 0% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    8 us
+  Make Parsable                       2 us
+  Update Region States              207 us
+  Scan Roots                       1098 us, parallelism: 1.72x
+    S: <total>                     1891 us
+    S: Thread Roots                 951 us, workers (us):   1,   1, 756, 193, 
+    S: Universe Roots                 1 us, workers (us):   1, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             5 us, workers (us):   4,   1,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            366 us, workers (us): ---, 366, ---, ---, 
+    S: CLDG Roots                   563 us, workers (us): 469,  26,  41,  27, 
+    S: JVMTI Roots                    0 us, workers (us):   0, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                   97599 us
+  Weak References                  2570 us
+    Process                        2481 us
+    Enqueue                          87 us
+  Weak Roots                         20 us, parallelism: 0.95x
+    WR: <total>                      19 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               19 us, workers (us):  19, ---, ---, ---, 
+  System Purge                     8333 us
+    Unload Classes                  153 us
+    Parallel Cleanup               8051 us
+    Deallocate Metadata              59 us
+    CLDG                              3 us
+  Update Region States              220 us
+  Retire TLABs                        4 us
+  Choose Collection Set              27 us
+  Rebuild Free Set                    9 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     61482 us
+  Update Region States              119 us
+  Trash Collection Set               29 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         292555 us
+Pause Degenerated GC (N)         292381 us
+  Degen Update Roots               1177 us, parallelism: 3.26x
+    DU: <total>                    3840 us
+    DU: Thread Roots               1080 us, workers (us): 272, 711,  50,  46, 
+    DU: Code Cache Roots           1410 us, workers (us): 449,  57, 461, 443, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---, ---, ---,   1, 
+    DU: JNI Weak Roots              155 us, workers (us): ---, ---, ---, 155, 
+    DU: String Table Roots          628 us, workers (us): 198, 173, 199,  58, 
+    DU: Synchronizer Roots            5 us, workers (us):   5,   0,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             6 us, workers (us):   6, ---, ---, ---, 
+    DU: CLDG Roots                  548 us, workers (us):  65,  29, 227, 227, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 70918K->70918K(1114112K)]
+Failed to allocate Shared, 24B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+651.289: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 6544M (93%), Immediate: 0B (0%), CSet: 6544M (93%)
+    Good progress for free space: 6544M, need 83886K
+    Good progress for used space: 6544M, need 4096K
+651.821: [Pause Degenerated GC (Outside of Cycle) 7780M->1235M(8192M), 532.114 ms]
+Free: 6544M, Max: 4096K regular, 3768M humongous, Frag: 43% external, 4% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    9 us
+  Make Parsable                       3 us
+  Update Region States              172 us
+  Scan Roots                       1718 us, parallelism: 2.02x
+    S: <total>                     3475 us
+    S: Thread Roots                1577 us, workers (us):   1, 1179, 395,   1, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              3 us, workers (us): ---,   3, ---, ---, 
+    S: Synchronizer Roots            12 us, workers (us):   5,   6,   0,   0, 
+    S: Flat Profiler Roots            2 us, workers (us):   2, ---, ---, ---, 
+    S: Management Roots               2 us, workers (us):   2, ---, ---, ---, 
+    S: System Dict Roots            673 us, workers (us): 673, ---, ---, ---, 
+    S: CLDG Roots                  1204 us, workers (us):  38, 177, 156, 833, 
+    S: JVMTI Roots                    1 us, workers (us): ---,   1, ---, ---, 
+  Resize TLABs                        3 us
+  Finish Queues                  108578 us
+  Weak References                  2556 us
+    Process                        2412 us
+    Enqueue                         141 us
+  Weak Roots                         27 us, parallelism: 0.96x
+    WR: <total>                      26 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               26 us, workers (us):  26, ---, ---, ---, 
+  System Purge                     9334 us
+    Unload Classes                  156 us
+    Parallel Cleanup               9030 us
+    Deallocate Metadata              68 us
+    CLDG                              3 us
+  Update Region States              206 us
+  Retire TLABs                        5 us
+  Choose Collection Set              34 us
+  Rebuild Free Set                   12 us
+  Initial Evacuation                  1 us
+  Prepare                             3 us
+  Finish Work                     94784 us
+  Update Region States               22 us
+  Trash Collection Set               22 us
+  Rebuild Free Set                   11 us
+Pause Degenerated GC (G)         532286 us
+Pause Degenerated GC (N)         532145 us
+  Degen Update Roots               1491 us, parallelism: 3.39x
+    DU: <total>                    5052 us
+    DU: Thread Roots               1554 us, workers (us): 932,  99,  98, 425, 
+    DU: Code Cache Roots           1357 us, workers (us):   0, 495, 486, 377, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                2 us, workers (us): ---, ---, ---,   2, 
+    DU: JNI Weak Roots              470 us, workers (us): ---, ---, ---, 470, 
+    DU: String Table Roots          960 us, workers (us): 261, 348, 352,   0, 
+    DU: Synchronizer Roots            9 us, workers (us):   5,   0,   4,   0, 
+    DU: Flat Profiler Roots           6 us, workers (us): ---,   6, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots            11 us, workers (us):  11, ---, ---, ---, 
+    DU: CLDG Roots                  679 us, workers (us):  33, 307, 307,  33, 
+    DU: JVMTI Roots                   1 us, workers (us):   1, ---, ---, ---, 
+, [Metaspace: 70937K->70937K(1114112K)]
+Failed to allocate Shared, 6616B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+707.375: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 6608M (94%), Immediate: 0B (0%), CSet: 6608M (94%)
+    Good progress for free space: 6555M, need 83886K
+    Good progress for used space: 6554M, need 4096K
+707.673: [Pause Degenerated GC (Outside of Cycle) 7779M->1224M(8192M), 297.813 ms]
+Free: 6554M, Max: 4096K regular, 3776M humongous, Frag: 43% external, 8% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    9 us
+  Make Parsable                       3 us
+  Update Region States              145 us
+  Scan Roots                       1600 us, parallelism: 1.62x
+    S: <total>                     2596 us
+    S: Thread Roots                1304 us, workers (us):   1, 1099,   1, 202, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             7 us, workers (us):   7,   0,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            417 us, workers (us): 417, ---, ---, ---, 
+    S: CLDG Roots                   861 us, workers (us):  26,  95, 678,  62, 
+    S: JVMTI Roots                    0 us, workers (us):   0, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  108757 us
+  Weak References                  2409 us
+    Process                        2352 us
+    Enqueue                          54 us
+  Weak Roots                         22 us, parallelism: 0.97x
+    WR: <total>                      21 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               21 us, workers (us):  21, ---, ---, ---, 
+  System Purge                     8244 us
+    Unload Classes                  144 us
+    Parallel Cleanup               7979 us
+    Deallocate Metadata              55 us
+    CLDG                              3 us
+  Update Region States              204 us
+  Retire TLABs                        5 us
+  Choose Collection Set              27 us
+  Rebuild Free Set                   10 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     67455 us
+  Update Region States               48 us
+  Trash Collection Set               22 us
+  Rebuild Free Set                   11 us
+Pause Degenerated GC (G)         298061 us
+Pause Degenerated GC (N)         297842 us
+  Degen Update Roots               1147 us, parallelism: 3.31x
+    DU: <total>                    3796 us
+    DU: Thread Roots               1046 us, workers (us): 268, 664,  74,  40, 
+    DU: Code Cache Roots           1423 us, workers (us): 440,  81, 442, 459, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    DU: JNI Weak Roots              152 us, workers (us): 152, ---, ---, ---, 
+    DU: String Table Roots          613 us, workers (us):  56, 175, 204, 178, 
+    DU: Synchronizer Roots            5 us, workers (us):   5,   0,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             6 us, workers (us):   6, ---, ---, ---, 
+    DU: CLDG Roots                  543 us, workers (us):  52,  27, 230, 234, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 70967K->70967K(1114112K)]
+Failed to allocate Shared, 16B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+764.325: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 6256M (89%), Immediate: 0B (0%), CSet: 6256M (89%)
+    Good progress for free space: 6256M, need 83886K
+    Good progress for used space: 6256M, need 4096K
+764.928: [Pause Degenerated GC (Outside of Cycle) 7779M->1523M(8192M), 602.689 ms]
+Free: 6255M, Max: 4096K regular, 3480M humongous, Frag: 45% external, 11% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    9 us
+  Make Parsable                       3 us
+  Update Region States               96 us
+  Scan Roots                       1032 us, parallelism: 1.82x
+    S: <total>                     1880 us
+    S: Thread Roots                 909 us, workers (us):   1,   1, 213, 693, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              3 us, workers (us):   3, ---, ---, ---, 
+    S: Synchronizer Roots             9 us, workers (us):   8,   0,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            280 us, workers (us): 280, ---, ---, ---, 
+    S: CLDG Roots                   676 us, workers (us):  26, 523,  65,  62, 
+    S: JVMTI Roots                    1 us, workers (us):   1, ---, ---, ---, 
+  Resize TLABs                        1 us
+  Finish Queues                  118684 us
+  Weak References                  2333 us
+    Process                        2226 us
+    Enqueue                         104 us
+  Weak Roots                         23 us, parallelism: 0.98x
+    WR: <total>                      23 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               22 us, workers (us):  22, ---, ---, ---, 
+  System Purge                     8535 us
+    Unload Classes                  147 us
+    Parallel Cleanup               8265 us
+    Deallocate Metadata              54 us
+    CLDG                              3 us
+  Update Region States               62 us
+  Retire TLABs                        5 us
+  Choose Collection Set              28 us
+  Rebuild Free Set                   11 us
+  Initial Evacuation                  1 us
+  Prepare                             1 us
+  Finish Work                     80881 us
+  Update Region States               24 us
+  Trash Collection Set               22 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         602886 us
+Pause Degenerated GC (N)         602710 us
+  Degen Update Roots               2201 us, parallelism: 3.38x
+    DU: <total>                    7430 us
+    DU: Thread Roots               2970 us, workers (us): 189, 184, 1593, 1005, 
+    DU: Code Cache Roots           2015 us, workers (us): 756, 743,   0, 515, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             2 us, workers (us):   2, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---,   1, ---, ---, 
+    DU: JNI Weak Roots              297 us, workers (us): ---, 297, ---, ---, 
+    DU: String Table Roots          753 us, workers (us): 293,   0, 171, 289, 
+    DU: Synchronizer Roots           29 us, workers (us):  13,   0,   9,   6, 
+    DU: Flat Profiler Roots          17 us, workers (us): ---,  17, ---, ---, 
+    DU: Management Roots              3 us, workers (us):   3, ---, ---, ---, 
+    DU: System Dict Roots            28 us, workers (us): ---, ---,  28, ---, 
+    DU: CLDG Roots                 1311 us, workers (us): 609, 611,  50,  41, 
+    DU: JVMTI Roots                   2 us, workers (us): ---,   2, ---, ---, 
+, [Metaspace: 71027K->71027K(1114112K)]
+Failed to allocate Shared, 24B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+820.200: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 420M, Max CSet: 350M
+    Collectable Garbage: 6285M (90%), Immediate: 8192K (0%), CSet: 6277M (90%)
+    Good progress for free space: 6284M, need 83886K
+    Good progress for used space: 6283M, need 4096K
+820.575: [Pause Degenerated GC (Outside of Cycle) 7779M->1495M(8192M), 375.182 ms]
+Free: 6283M, Max: 4096K regular, 3508M humongous, Frag: 45% external, 6% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                   19 us
+  Make Parsable                       5 us
+  Update Region States               54 us
+  Scan Roots                       1633 us, parallelism: 1.86x
+    S: <total>                     3040 us
+    S: Thread Roots                1507 us, workers (us):  41, 325, 1141,   1, 
+    S: Universe Roots                 3 us, workers (us):   3, ---, ---, ---, 
+    S: JNI Handles Roots              4 us, workers (us):   4, ---, ---, ---, 
+    S: Synchronizer Roots            14 us, workers (us):  14,   0,   0,   0, 
+    S: Flat Profiler Roots            4 us, workers (us):   4, ---, ---, ---, 
+    S: Management Roots               3 us, workers (us):   3, ---, ---, ---, 
+    S: System Dict Roots            398 us, workers (us): 398, ---, ---, ---, 
+    S: CLDG Roots                  1106 us, workers (us):  27, 140, 138, 801, 
+    S: JVMTI Roots                    1 us, workers (us):   1, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  142229 us
+  Weak References                  1584 us
+    Process                        1529 us
+    Enqueue                          51 us
+  Weak Roots                         25 us, parallelism: 0.97x
+    WR: <total>                      24 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               24 us, workers (us):  24, ---, ---, ---, 
+  System Purge                     9117 us
+    Unload Classes                  157 us
+    Parallel Cleanup               8779 us
+    Deallocate Metadata             104 us
+    CLDG                              4 us
+  Update Region States               85 us
+  Retire TLABs                        6 us
+  Choose Collection Set              30 us
+  Rebuild Free Set                    9 us
+  Initial Evacuation                  2 us
+  Prepare                             2 us
+  Finish Work                     78277 us
+  Update Region States              304 us
+  Trash Collection Set               21 us
+  Rebuild Free Set                   12 us
+Pause Degenerated GC (G)         375394 us
+Pause Degenerated GC (N)         375203 us
+  Degen Update Roots               1171 us, parallelism: 3.15x
+    DU: <total>                    3688 us
+    DU: Thread Roots               1230 us, workers (us): 307, 824,  64,  34, 
+    DU: Code Cache Roots           1060 us, workers (us): 369,   0, 342, 348, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us):   1, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---, ---,   1, ---, 
+    DU: JNI Weak Roots              180 us, workers (us): ---, ---, 180, ---, 
+    DU: String Table Roots          609 us, workers (us): 222,  80,  68, 238, 
+    DU: Synchronizer Roots            7 us, workers (us):   6,   0,   0,   0, 
+    DU: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             7 us, workers (us):   7, ---, ---, ---, 
+    DU: CLDG Roots                  589 us, workers (us):  54,  32, 253, 251, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 71088K->71088K(1114112K)]
+Failed to allocate Shared, 2064B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+877.155: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 6052M (87%), Immediate: 0B (0%), CSet: 6052M (87%)
+    Good progress for free space: 6052M, need 83886K
+    Good progress for used space: 6052M, need 4096K
+877.740: [Pause Degenerated GC (Outside of Cycle) 7779M->1727M(8192M), 584.368 ms]
+Free: 6052M, Max: 4096K regular, 3276M humongous, Frag: 46% external, 10% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                   10 us
+  Make Parsable                       3 us
+  Update Region States              151 us
+  Scan Roots                       1258 us, parallelism: 1.60x
+    S: <total>                     2006 us
+    S: Thread Roots                1092 us, workers (us): 201,   1,   1, 888, 
+    S: Universe Roots                 2 us, workers (us):   2, ---, ---, ---, 
+    S: JNI Handles Roots              3 us, workers (us): ---,   3, ---, ---, 
+    S: Synchronizer Roots             8 us, workers (us):   5,   3,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               2 us, workers (us): ---,   2, ---, ---, 
+    S: System Dict Roots            264 us, workers (us): ---, 264, ---, ---, 
+    S: CLDG Roots                   634 us, workers (us):  63,  25, 521,  25, 
+    S: JVMTI Roots                    1 us, workers (us):   1, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  132417 us
+  Weak References                  2144 us
+    Process                        2043 us
+    Enqueue                          98 us
+  Weak Roots                         23 us, parallelism: 0.97x
+    WR: <total>                      23 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               23 us, workers (us):  23, ---, ---, ---, 
+  System Purge                     9040 us
+    Unload Classes                  147 us
+    Parallel Cleanup               8759 us
+    Deallocate Metadata              57 us
+    CLDG                              3 us
+  Update Region States               86 us
+  Retire TLABs                        5 us
+  Choose Collection Set              28 us
+  Rebuild Free Set                   10 us
+  Initial Evacuation                  1 us
+  Prepare                             1 us
+  Finish Work                     85758 us
+  Update Region States              117 us
+  Trash Collection Set               20 us
+  Rebuild Free Set                   13 us
+Pause Degenerated GC (G)         584594 us
+Pause Degenerated GC (N)         584396 us
+  Degen Update Roots               1091 us, parallelism: 3.24x
+    DU: <total>                    3535 us
+    DU: Thread Roots               1139 us, workers (us): 730, 300,  69,  41, 
+    DU: Code Cache Roots           1093 us, workers (us):   0, 354, 384, 356, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             2 us, workers (us):   2, ---, ---, ---, 
+    DU: JFR Weak Roots                1 us, workers (us): ---, ---, ---,   1, 
+    DU: JNI Weak Roots              161 us, workers (us): ---, ---, ---, 161, 
+    DU: String Table Roots          569 us, workers (us): 127, 205, 180,  57, 
+    DU: Synchronizer Roots            9 us, workers (us):   6,   2,   1,   0, 
+    DU: Flat Profiler Roots           5 us, workers (us): ---,   5, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             8 us, workers (us): ---, ---,   8, ---, 
+    DU: CLDG Roots                  546 us, workers (us):  27,  31, 246, 243, 
+    DU: JVMTI Roots                   1 us, workers (us):   1, ---, ---, ---, 
+, [Metaspace: 71110K->71110K(1114112K)]
+Failed to allocate Shared, 32400B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+931.770: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 5788M (83%), Immediate: 0B (0%), CSet: 5788M (83%)
+    Good progress for free space: 5751M, need 83886K
+    Good progress for used space: 5750M, need 4096K
+932.087: [Pause Degenerated GC (Outside of Cycle) 7779M->2028M(8192M), 317.177 ms]
+Free: 5750M, Max: 4096K regular, 2972M humongous, Frag: 49% external, 15% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    7 us
+  Make Parsable                       2 us
+  Update Region States              244 us
+  Scan Roots                       1190 us, parallelism: 1.51x
+    S: <total>                     1794 us
+    S: Thread Roots                 896 us, workers (us):   1,   2, 167, 727, 
+    S: Universe Roots                 1 us, workers (us):   1, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots             5 us, workers (us):   5,   0,   0,   0, 
+    S: Flat Profiler Roots            1 us, workers (us):   1, ---, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            293 us, workers (us): 293, ---, ---, ---, 
+    S: CLDG Roots                   595 us, workers (us):  26, 491,  52,  26, 
+    S: JVMTI Roots                    0 us, workers (us):   0, ---, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  120359 us
+  Weak References                  2409 us
+    Process                        2347 us
+    Enqueue                          59 us
+  Weak Roots                         24 us, parallelism: 0.98x
+    WR: <total>                      24 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               23 us, workers (us):  23, ---, ---, ---, 
+  System Purge                     8142 us
+    Unload Classes                  143 us
+    Parallel Cleanup               7856 us
+    Deallocate Metadata              76 us
+    CLDG                              3 us
+  Update Region States              150 us
+  Retire TLABs                        5 us
+  Choose Collection Set              32 us
+  Rebuild Free Set                   12 us
+  Initial Evacuation                  1 us
+  Prepare                             2 us
+  Finish Work                     70151 us
+  Update Region States              120 us
+  Trash Collection Set               18 us
+  Rebuild Free Set                   14 us
+Pause Degenerated GC (G)         317449 us
+Pause Degenerated GC (N)         317209 us
+  Degen Update Roots               1045 us, parallelism: 3.20x
+    DU: <total>                    3340 us
+    DU: Thread Roots               1066 us, workers (us): 690, 276,  52,  48, 
+    DU: Code Cache Roots            987 us, workers (us):   0, 335, 327, 325, 
+    DU: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    DU: JNI Handles Roots             1 us, workers (us): ---,   1, ---, ---, 
+    DU: JFR Weak Roots                0 us, workers (us): ---, ---, ---,   0, 
+    DU: JNI Weak Roots              158 us, workers (us): ---, ---, ---, 158, 
+    DU: String Table Roots          586 us, workers (us): 127, 200, 205,  54, 
+    DU: Synchronizer Roots            8 us, workers (us):   2,   6,   0,   0, 
+    DU: Flat Profiler Roots           5 us, workers (us):   5, ---, ---, ---, 
+    DU: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    DU: System Dict Roots             7 us, workers (us): ---,   7, ---, ---, 
+    DU: CLDG Roots                  520 us, workers (us):  25,  29, 235, 230, 
+    DU: JVMTI Roots                   0 us, workers (us):   0, ---, ---, ---, 
+, [Metaspace: 71124K->71124K(1114112K)]
+Failed to allocate Shared, 32400B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+983.708: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 412M, Max CSet: 343M
+    Collectable Garbage: 5516M (80%), Immediate: 0B (0%), CSet: 5516M (80%)
+    Cancelling GC: Allocation Failure During Evacuation
+    Cannot finish degeneration, upgrading to Full GC
+    Good progress for free space: 6896M, need 83886K
+    Good progress for used space: 7307M, need 4096K
+984.586: [Pause Degenerated GC (Outside of Cycle) 7779M->883M(8192M), 877.525 ms]
+Free: 6896M, Max: 4096K regular, 6868M humongous, Frag: 1% external, 10% internal; Reserve: 412M, Max: 4096K
+
+All times are wall-clock times, except per-root-class counters, that are sum over
+all workers. Dividing the <total> over the root stage time estimates parallelism.
+
+  Accumulate Stats                    6 us
+  Make Parsable                       3 us
+  Update Region States              119 us
+  Scan Roots                       1024 us, parallelism: 1.80x
+    S: <total>                     1847 us
+    S: Thread Roots                 949 us, workers (us):   1, 195,   1, 752, 
+    S: Universe Roots                 1 us, workers (us):   1, ---, ---, ---, 
+    S: JNI Handles Roots              2 us, workers (us):   2, ---, ---, ---, 
+    S: Synchronizer Roots            11 us, workers (us):   3,   4,   4,   0, 
+    S: Flat Profiler Roots            1 us, workers (us): ---,   1, ---, ---, 
+    S: Management Roots               1 us, workers (us):   1, ---, ---, ---, 
+    S: System Dict Roots            296 us, workers (us): 296, ---, ---, ---, 
+    S: CLDG Roots                   586 us, workers (us):  25,  60, 471,  31, 
+    S: JVMTI Roots                    0 us, workers (us): ---,   0, ---, ---, 
+  Resize TLABs                        2 us
+  Finish Queues                  132854 us
+  Weak References                  2452 us
+    Process                        2357 us
+    Enqueue                          93 us
+  Weak Roots                         23 us, parallelism: 0.98x
+    WR: <total>                      22 us
+    WR: JFR Weak Roots                0 us, workers (us):   0, ---, ---, ---, 
+    WR: JNI Weak Roots               22 us, workers (us):  22, ---, ---, ---, 
+  System Purge                     8215 us
+    Unload Classes                  142 us
+    Parallel Cleanup               7948 us
+    Deallocate Metadata              55 us
+    CLDG                              3 us
+  Update Region States               79 us
+  Retire TLABs                        5 us
+  Choose Collection Set              24 us
+  Rebuild Free Set                   11 us
+  Initial Evacuation                  1 us
+Pause Degenerated GC (G)         877767 us
+Pause Degenerated GC (N)         877559 us
+  Pre Heap Dump                       0 us
+  Prepare                         17293 us
+    Update Roots                   1222 us, parallelism: 3.31x
+      FU: <total>                  4046 us
+      FU: Thread Roots             1418 us, workers (us): 387, 896,  69,  66, 
+      FU: Code Cache Roots         1179 us, workers (us): 349,   0, 417, 413, 
+      FU: Universe Roots              1 us, workers (us):   1, ---, ---, ---, 
+      FU: JNI Handles Roots           1 us, workers (us):   1, ---, ---, ---, 
+      FU: JFR Weak Roots              1 us, workers (us):   1, ---, ---, ---, 
+      FU: JNI Weak Roots            190 us, workers (us): 190, ---, ---, ---, 
+      FU: String Table Roots        629 us, workers (us):  52, 103, 241, 233, 
+      FU: Synchronizer Roots         10 us, workers (us):   5,   5,   0,   0, 
+      FU: Flat Profiler Roots         2 us, workers (us): ---,   2, ---, ---, 
+      FU: Management Roots            1 us, workers (us):   1, ---, ---, ---, 
+      FU: System Dict Roots           8 us, workers (us):   8, ---, ---, ---, 
+      FU: CLDG Roots                607 us, workers (us):  31,  26, 274, 276, 
+      FU: JVMTI Roots                 1 us, workers (us):   1, ---, ---, ---, 
+  Scan Roots                       1188 us, parallelism: 1.92x
+    FS: <total>                    2283 us
+    FS: Thread Roots               1225 us, workers (us):   1,   1, 995, 228, 
+    FS: Universe Roots                2 us, workers (us):   2, ---, ---, ---, 
+    FS: JNI Handles Roots             4 us, workers (us):   4, ---, ---, ---, 
+    FS: Synchronizer Roots           14 us, workers (us):   6,   8,   0,   0, 
+    FS: Flat Profiler Roots           1 us, workers (us): ---,   1, ---, ---, 
+    FS: Management Roots              1 us, workers (us): ---,   1, ---, ---, 
+    FS: System Dict Roots           320 us, workers (us): 320, ---, ---, ---, 
+    FS: CLDG Roots                  716 us, workers (us):  24, 614,  40,  38, 
+    FS: JVMTI Roots                   1 us, workers (us):   1, ---, ---, ---, 
+  Mark                           171714 us
+    Finish Queues                161008 us
+    Weak References                 875 us
+      Process                       850 us
+      Enqueue                        21 us
+    Weak Roots                       48 us, parallelism: 0.99x
+      WR: <total>                    47 us
+      WR: JFR Weak Roots              0 us, workers (us):   0, ---, ---, ---, 
+      WR: JNI Weak Roots             47 us, workers (us):  47, ---, ---, ---, 
+    System Purge                   8558 us
+      Unload Classes                158 us
+    Parallel Cleanup               8270 us
+    Deallocate Metadata              57 us
+    CLDG                              3 us
+  Calculate Addresses             76029 us
+    Regular Objects               75984 us
+    Humongous Objects                19 us
+  Adjust Pointers                131875 us
+    FA: <total>                   11026 us
+    FA: Thread Roots                157 us, workers (us):  64,  65,  27,   1, 
+    FA: Code Cache Roots           8032 us, workers (us): 1789, 2057, 1994, 2191, 
+    FA: Universe Roots                1 us, workers (us):   1, ---, ---, ---, 
+    FA: JNI Handles Roots             2 us, workers (us):   2, ---, ---, ---, 
+    FA: JFR Weak Roots                0 us, workers (us): ---, ---,   0, ---, 
+    FA: JNI Weak Roots              122 us, workers (us): ---, ---, 122, ---, 
+    FA: String Table Roots         2046 us, workers (us): 478, 574, 549, 445, 
+    FA: Synchronizer Roots           10 us, workers (us):  10,   0,   0,   0, 
+    FA: Flat Profiler Roots           4 us, workers (us):   4, ---, ---, ---, 
+    FA: Management Roots              1 us, workers (us):   1, ---, ---, ---, 
+    FA: System Dict Roots            11 us, workers (us):  11, ---, ---, ---, 
+    FA: CLDG Roots                  640 us, workers (us): 440,  65,  70,  64, 
+    FA: JVMTI Roots                   1 us, workers (us):   1, ---, ---, ---, 
+  Copy Objects                   194616 us
+    Regular Objects              189877 us
+    Humongous Objects                23 us
+    Reset Complete Bitmap          4621 us
+    Rebuild Region Sets              95 us
+  Resize TLABs                        8 us
+  Post Heap Dump                      0 us
+, [Metaspace: 71142K->71142K(1114112K)]
+Failed to allocate Shared, 1072B
+Cancelling GC: Allocation Failure
+Trigger: Handle Allocation Failure
+Free: 0B, Max: 0B regular, 0B humongous, Frag: 0% external, 0% internal; Reserve: 412M, Max: 4096K
+1047.500: [Pause Degenerated GC (Outside of Cycle), start]
+    Using 4 of 4 workers for stw degenerated gc
+    CSet Selection. Actual Free: 416M, Max CSet: 346M
+    Collectable Garbage: 4797M (69%), Immediate: 4096K (0%), CSet: 4793M (69%)
+    Good progress for free space: 4737M, need 83886K
+    Good progress for used space: 4736M, need 4096K
+1047.828: [Pause Degenerated GC (Outside of Cycle) 7779M->3042M(8192M), 327.946 ms]

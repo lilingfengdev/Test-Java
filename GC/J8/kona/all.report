@@ -1,0 +1,36 @@
+
+GC:Concurrent Mark Sweep GC
+吞吐量:99.171MS
+最大暂停时间:120.0MS
+平均暂停时间:39.581387MS
+
+
+GC:G1 Parallel FullGC(Kona)
+吞吐量:99.554MS
+最大暂停时间:430.0MS
+平均暂停时间:70.72463MS
+
+
+GC:G1GC
+吞吐量:99.136MS
+最大暂停时间:2540.0MS
+平均暂停时间:102.47424MS
+
+
+GC:G1GC Full Optimize(Kona)
+吞吐量:99.619MS
+最大暂停时间:210.0MS
+平均暂停时间:62.71185MS
+
+
+GC:ParallelGC
+吞吐量:98.72MS
+最大暂停时间:290.0MS
+平均暂停时间:129.20792MS
+
+
+GC:SerialGC
+吞吐量:97.626MS
+最大暂停时间:12000.0MS
+平均暂停时间:389.20636MS
+

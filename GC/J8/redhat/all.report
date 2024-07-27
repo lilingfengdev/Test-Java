@@ -1,0 +1,42 @@
+
+GC:Concurrent Mark Sweep GC
+吞吐量:99.114MS
+最大暂停时间:120.0MS
+平均暂停时间:37.41312MS
+
+
+GC:G1GC
+吞吐量:99.232MS
+最大暂停时间:1420.0MS
+平均暂停时间:117.42858MS
+
+
+GC:ParallelGC
+吞吐量:98.565MS
+最大暂停时间:420.0MS
+平均暂停时间:134.11215MS
+
+
+GC:SerialGC
+吞吐量:97.148MS
+最大暂停时间:14140.0MS
+平均暂停时间:552.9091MS
+
+
+GC:Shenandoah GC(IU Mode)
+吞吐量:99.98MS
+最大暂停时间:7.2070003MS
+平均暂停时间:1.4251397MS
+
+
+GC:Shenandoah GC(Normal)
+吞吐量:99.981MS
+最大暂停时间:11.114MS
+平均暂停时间:1.5043797MS
+
+
+GC:Shenandoah GC(Passive Mode)
+吞吐量:99.275MS
+最大暂停时间:877.525MS
+平均暂停时间:377.9723MS
+
