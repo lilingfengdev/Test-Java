@@ -16,9 +16,7 @@ Paper 1.13.2
 
 性能最差: IBM OpenJ9
 
-内存占用最高: IBM OpenJ9
-
-内存占用最低: OpenJDK(RedHat)
+内存占用最低: IBM OpenJ9
 
 ## 图表
 
@@ -29,10 +27,6 @@ CPS 变动(高斯平滑,sigma=10):
 CPS 变动(别看了):
 
 ![](cps.png)
-
-内存使用:
-
-![](mem.png)
 
 ## 性能
 
@@ -55,17 +49,3 @@ TencentKona 平均CPS:98.80091556459816
 生成用时:0:16:56
 
 平均CPS:98.10040691759919
-
-## 内存
-
-### OpenJDK(RedHat)
-
-内存占用:5690MB
-
-### Alibaba Dragonwell 
-
-内存占用:5808MB
-
-### TencentKona
-
-内存占用:5831MB

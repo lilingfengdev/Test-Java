@@ -17,9 +17,7 @@ Purpur 1.21 Build 2273
 
 性能最差: OpenLogic OpenJDK(0:36:02)
 
-内存占用最高: Azul Zulu(5074MB!!)
-
-内存占用最低: Amazon Corretto(703MB)(没错,不是OpenJ9)
+内存占用最低: OpenJ9
 
 ## 图表
 
@@ -32,10 +30,6 @@ CPS 变动(高斯平滑,sigma=10):
 CPS 变动(别看了):
 
 ![](cps.png)
-
-内存使用:
-
-![](mem.png)
 
 ## 性能
 
@@ -74,29 +68,5 @@ CPS 变动(别看了):
 生成用时:0:34:51
 
 平均CPS:47.23290222452147
-
-## 内存
-
-### Amazon Corretto
-
-内存占用:703MB
-
-### IBM Semeru Runtime(OpenJ9)
-
-内存占用:1249MB
-
-### GraalVM Enterprise Edition
-
-六边形战士
-
-内存占用:1429MB
-
-### BellSoft Liberica JDK
-
-内存占用:2315MB
-
-### Oracle Java SE Development Kit
-
-内存占用:2475MB
 
 各个JDK详细指标和完整日志在本目录
